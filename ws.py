@@ -7,7 +7,7 @@ app.config['PROPAGATE_EXCEPTIONS'] = True
 
 @app.route("/")
 def base():
-    return "<strong>hello from Flask</strong>"
+    return "<strong>hello from Flask and IDEA </strong>"
 
 @app.route("/test")
 def test():
