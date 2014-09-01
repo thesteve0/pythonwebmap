@@ -6,7 +6,9 @@ infile = open('US_CONCISE.csv', 'r')
 outfile = open('gnis.json', 'w')
 
 headersArray = infile.readline().rstrip().split(',')
+i = 1
 for line in infile:
+    print i
     new_dict = {}
     point_array = [2]
     splitline = line.rstrip().split(',')
@@ -22,7 +24,9 @@ for line in infile:
     new_dict["pos"] = coords
 
     #add the geoson to the dict
-    print json.dumps(new_dict)
+    json.dump(new_dict, outfile)
+    outfile.write("\n")
+    i = i + 1
 
-
+outfile.close()
 print "The End"
