@@ -1,12 +1,28 @@
 __author__ = 'spousty'
 
+import json
+
 infile = open('US_CONCISE.csv', 'r')
 outfile = open('gnis.json', 'w')
 
-print(infile.readline())
+headersArray = infile.readline().rstrip().split(',')
 for line in infile:
+    new_dict = {}
+    point_array = [2]
     splitline = line.rstrip().split(',')
-    print splitline
+    for x in range(0, len(headersArray)):
+        #if header = long put in first spot or if lat in second slot
+        if ("LONG" == headersArray[x]):
+            point_array.insert(0, float(splitline[x]))
+        elif ("LAT" == headersArray[x]):
+            point_array.insert(1, float(splitline[x]))
+        else:
+            new_dict[headersArray[x]] = splitline[x]
+    coords = {'type': "Point", 'coordinates': point_array}
+    new_dict["pos"] = coords
+
+    #add the geoson to the dict
+    print json.dumps(new_dict)
 
 
 print "The End"
