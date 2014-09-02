@@ -10,7 +10,7 @@ i = 1
 for line in infile:
     print i
     new_dict = {}
-    point_array = [2]
+    point_array = []
     splitline = line.rstrip().split(',')
     for x in range(0, len(headersArray)):
         #if header = long put in first spot or if lat in second slot
