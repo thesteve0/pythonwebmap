@@ -42,7 +42,7 @@ def base():
 
 
     result = db.placenames
-    return db.collection_names()
+    return db.name
 
     #return str(json.dumps({'results':list(result)},default=json_util.default))
 
