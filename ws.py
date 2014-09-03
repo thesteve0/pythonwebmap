@@ -35,8 +35,8 @@ if hasattr(g, 'mongodb_client'):
 
 @app.route("/")
 def base():
-    client = get_db()
-    db = client.db[os.environ['OPENSHIFT_APP_NAME']]
+    db = get_db()
+    #db = client.db[os.environ['OPENSHIFT_APP_NAME']]
 
 
 
