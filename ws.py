@@ -36,12 +36,14 @@ if hasattr(g, 'mongodb_client'):
 def base():
     client = get_db()
     client[os.environ['OPENSHIFT_APP_NAME']].authenticate(os.environ['OPENSHIFT_MONGODB_DB_USERNAME'], os.environ['OPENSHIFT_MONGODB_DB_PASSWORD'], source='admin')
-    db = client.db[os.environ['OPENSHIFT_APP_NAME']]
+    db = client[os.environ['OPENSHIFT_APP_NAME']]
 
 
 
 
-    result = db.placenames.find()
+    result = db.placenames.count()
+
+
     return str(result)
 
     #return str(json.dumps({'results':list(result)},default=json_util.default))
