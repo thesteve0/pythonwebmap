@@ -33,13 +33,13 @@ if hasattr(g, 'mongodb_client'):
 @app.route("/")
 def base():
     client = get_db()
-    #placenames = client.db['placenames']
+    placenames = client.db['placenames']
 
-    #result = placenames.find_one()
+    result = placenames.find_one()
 
-    #result = str(result) + " " + str(client.database_names())
+    result = str(result) + " " + str(client.database_names())
 
-    return str(client.database_names())
+    return result
 
 @app.route("/test")
 def test():
