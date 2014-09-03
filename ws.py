@@ -33,10 +33,10 @@ if hasattr(g, 'mongodb_client'):
 @app.route("/")
 def base():
     client = get_db()
-    placenames = client.db[os.environ['OPENSHIFT_APP_NAME']]
+    db = client.db[os.environ['OPENSHIFT_APP_NAME']]
 
 
-    result = placenames.find_one()
+    result = db['placenames'].find_one()
 
     result = str(result) + " " + str(placenames.collection_names)
 
