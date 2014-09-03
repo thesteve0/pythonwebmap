@@ -13,14 +13,13 @@ app = Flask(__name__)
 app.config['PROPAGATE_EXCEPTIONS'] = True
 
 def get_db():
-    if not hasattr(g, 'mongodb_db'):
+    if not hasattr(g, 'mongodb_client'):
         g.mongodb_client = get_MongoDB()
     return g.mongodb_client
 
 
 def get_MongoDB():
     client = MongoClient(os.environ['OPENSHIFT_MONGODB_DB_URL'])
-
     return client
 
 @app.teardown_appcontext
@@ -37,6 +36,8 @@ def base():
     placenames = db['placenames']
 
     result = placenames.find_one()
+
+    result = str(result) + " " + client.database_names()
 
     return str(result)
 
