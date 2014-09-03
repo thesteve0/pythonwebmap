@@ -38,7 +38,7 @@ def base():
 
     result = db['placenames'].find_one()
 
-    result = str(result.name)
+    result = str(db.name)
 
     return result
 
