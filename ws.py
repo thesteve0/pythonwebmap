@@ -19,7 +19,7 @@ def get_db():
 
 
 def get_MongoDB():
-    client = MongoClient(os.environ['OPENSHIFT_MONGODB_DB_URL'])
+    client = MongoClient(os.environ['OPENSHIFT_MONGODB_DB_URL'] + os.environ['OPENSHIFT_APP_NAME'])
     return client
 
 @app.teardown_appcontext
@@ -32,14 +32,13 @@ if hasattr(g, 'mongodb_client'):
 @app.route("/")
 def base():
     client = get_db()
-    db = client['OPENSHIFT_APP_NAME']
-    placenames = db['placenames']
+    #placenames = client.db['placenames']
 
-    result = placenames.find_one()
+    #result = placenames.find_one()
 
-    result = str(result) + " " + str(client.database_names())
+    #result = str(result) + " " + str(client.database_names())
 
-    return str(result)
+    return str(client.database_names())
 
 @app.route("/test")
 def test():
