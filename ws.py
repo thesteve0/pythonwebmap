@@ -34,18 +34,12 @@ if hasattr(g, 'mongodb_client'):
     g.mongodb_client.close()
 
 
-@app.route("/")
+@app.route("/ws/parks")
 def base():
     db = get_db()
-
-
-
-
-
     result = db.placenames.count()
 
-
-    return str(result)
+    return str(json.dumps({'results':list(result)},default=json_util.default))
 
     #return str(json.dumps({'results':list(result)},default=json_util.default))
 
