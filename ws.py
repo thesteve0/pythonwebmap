@@ -36,9 +36,9 @@ def base():
     db = client.db[os.environ['OPENSHIFT_APP_NAME']]
 
 
-    result = db['placenames'].find_one()
+    placenames = db['placenames']
 
-    result = str(db.name)
+    result = str(placenames.find_one())
 
     return result
 
