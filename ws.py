@@ -24,7 +24,8 @@ def get_db():
 def get_MongoDB():
     client = MongoClient(os.environ['OPENSHIFT_MONGODB_DB_HOST'],  int(os.environ['OPENSHIFT_MONGODB_DB_PORT']))
     client[os.environ['OPENSHIFT_APP_NAME']].authenticate(os.environ['OPENSHIFT_MONGODB_DB_USERNAME'], os.environ['OPENSHIFT_MONGODB_DB_PASSWORD'], source='admin')
-    return client
+    db = client[os.environ['OPENSHIFT_APP_NAME']]
+    return db
 
 @app.teardown_appcontext
 def close_db(error):
@@ -35,8 +36,8 @@ if hasattr(g, 'mongodb_client'):
 
 @app.route("/")
 def base():
-    client = get_db()
-    db = client[os.environ['OPENSHIFT_APP_NAME']]
+    db = get_db()
+
 
 
 
