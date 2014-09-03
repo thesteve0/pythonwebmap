@@ -37,7 +37,7 @@ def base():
 
     result = placenames.find_one()
 
-    result = str(result) + " " + client.database_names()
+    result = str(result) + " " + str(client.database_names())
 
     return str(result)
 
