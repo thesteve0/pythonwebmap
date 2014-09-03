@@ -35,9 +35,10 @@ def base():
     client = get_db()
     placenames = client.db['placenames']
 
+
     result = placenames.find_one()
 
-    result = str(result) + " " + str(client.database_names())
+    result = str(result) + " " + str(placenames.collection_names)
 
     return result
 
