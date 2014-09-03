@@ -2,6 +2,9 @@ from flask import Flask
 from flask import g
 import os
 from pymongo.mongo_client import MongoClient
+import json
+from bson import json_util
+from bson import objectid
 
 #TODO import data (maybe new data)
 #todo build 2d spehere index
@@ -36,11 +39,11 @@ def base():
     db = client.db[os.environ['OPENSHIFT_APP_NAME']]
 
 
-    placenames = db['placenames']
 
-    result = str(placenames.find_one())
 
-    return result
+    result = db.placenames.find()
+
+    return str(json.dumps({'results':list(result)},default=json_util.default))
 
 @app.route("/test")
 def test():
