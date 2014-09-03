@@ -41,9 +41,10 @@ def base():
 
 
 
-    result = db.placenames.find()
+    result = db.placenames
+    return result.full_name
 
-    return str(json.dumps({'results':list(result)},default=json_util.default))
+    #return str(json.dumps({'results':list(result)},default=json_util.default))
 
 @app.route("/test")
 def test():
