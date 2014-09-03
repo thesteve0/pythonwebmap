@@ -35,7 +35,7 @@ if hasattr(g, 'mongodb_client'):
 
 
 @app.route("/ws/parks")
-def base():
+def AllParks():
     db = get_db()
     result = db.placenames.count()
 
@@ -46,6 +46,10 @@ def base():
 @app.route("/test")
 def test():
     return "<strong>It actually worked</strong>"
+
+@app.route("/")
+def base():
+    return "<h1>How very strange</h1>"
 
 if __name__ == "__main__":
     app.run()
