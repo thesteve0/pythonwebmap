@@ -47,7 +47,8 @@ def near():
     lon = float(request.args.get('lon'))
     #use the request parameters in the query
     result = db.placenames.find({"pos" : { "$near" : {"$geometry" : { type : "Point" , "coordinates": [ lon , lat ] }}}}).limit(5)
-    print result
+    for doc in result:
+        print doc
     #turn the results into valid JSON
     return Response(response=json.dumps({'results':list(result)},default=json_util.default), status=200, mimetype="application/json" )
 
