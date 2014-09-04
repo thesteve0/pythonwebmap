@@ -48,7 +48,7 @@ def near():
     #use the request parameters in the query
     print "before query"
     #result = db.placenames.find_one({"pos" : { "$near" : {"$geometry" : { type : "Point" , "coordinates": [ lon , lat ] }}}})
-    result = db.placenames.count({"pos" : { "$near" : {"$geometry" : { type : "Point" , "coordinates": [ lon , lat ] }}}})
+    result = db.placenames.count({"pos" : { "$near" : {"$geometry" : { "type" : "Point" , "coordinates": [ lon , lat ] }}}})
     print "after query"
     #for doc in result:
     #   print doc
