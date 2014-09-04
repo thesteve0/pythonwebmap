@@ -64,7 +64,7 @@ def within():
     geometry = { "type" : "Polygon", "coordinates" : [[[lon1, lat1], [lon2, lat1], [lon2, lat2], [lon1, lat2], [lon1, lat1]]]}
     #again impose a limit as the results may be large for larger map extents
     result = db.placenames.find({"pos" : { "$geoWithin" : { "$geometry" : geometry} } }).limit(600)
-    return Response(response=str(json.dumps({'results':list(result)},default=json_util.default)), status=200, mimetype="application/json" )
+    return Response(response=str(json.dumps({result},default=json_util.default)), status=200, mimetype="application/json" )
 
 
 #find parks near a lat and long passed in as query parameters (near?lat=45.5&lon=-82)
