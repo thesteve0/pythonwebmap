@@ -58,6 +58,7 @@
     function pinTheMap(data){
         //clear the current pins
         map.removeLayer(markerLayerGroup);
+        var justData = data.results
 
         //add the new pins
         var markerArray = new Array(data.length)
