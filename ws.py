@@ -47,13 +47,14 @@ def near():
     lon = float(request.args.get('lon'))
     #use the request parameters in the query
     print "before query"
-    result = db.placenames.find_one({"pos" : { "$near" : {"$geometry" : { type : "Point" , "coordinates": [ lon , lat ] }}}})
-    #result = db.placenames.find({"pos" : { "$near" : {"$geometry" : { type : "Point" , "coordinates": [ lon , lat ] }}}}).limit(5)
+    #result = db.placenames.find_one({"pos" : { "$near" : {"$geometry" : { type : "Point" , "coordinates": [ lon , lat ] }}}})
+    result = db.placenames.count({"pos" : { "$near" : {"$geometry" : { type : "Point" , "coordinates": [ lon , lat ] }}}})
     print "after query"
-    for doc in result:
-        print doc
+    #for doc in result:
+    #   print doc
     #turn the results into valid JSON
-    return Response(response=json.dumps({'results':list(result)},default=json_util.default), status=200, mimetype="application/json" )
+    #return Response(response=json.dumps({'results':list(result)},default=json_util.default), status=200, mimetype="application/json" )
+    return str(result)
 
 @app.route("/ws/parks")
 def AllParks():
