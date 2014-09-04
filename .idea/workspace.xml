@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ae5bdb99-3b1e-420c-bf0e-6be2f16c248d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/index.html" afterPath="$PROJECT_DIR$/static/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pythonwebmap.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,8 +80,8 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38250428" vertical-offset="677" max-vertical-offset="1365">
-              <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.27958834" vertical-offset="362" max-vertical-offset="1380">
+              <caret line="35" column="86" selection-start-line="35" selection-start-column="86" selection-end-line="35" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -629,8 +628,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38250428" vertical-offset="677" max-vertical-offset="1365">
-          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.27958834" vertical-offset="362" max-vertical-offset="1380">
+          <caret line="35" column="86" selection-start-line="35" selection-start-column="86" selection-end-line="35" selection-end-column="86" />
           <folding />
         </state>
       </provider>
