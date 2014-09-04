@@ -39,7 +39,7 @@ if hasattr(g, 'mongodb_client'):
 def AllParks():
     db = get_db()
     result = db.placenames.find()
-    return Response(str(json.dumps({'results':list(result)},default=json_util.default)), 200, "application/json" )
+    return Response(response=str(json.dumps({'results':list(result)},default=json_util.default)), status=200, mimetype="application/json" )
 
     #return str(json.dumps({'results':list(result)},default=json_util.default))
 
