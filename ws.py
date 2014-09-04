@@ -14,7 +14,7 @@ from bson import objectid
 #todo modify the JS that makes the pins
 
 
-
+#need to define the location of static content
 app = Flask(__name__, static_url_path='' )
 #add this so that flask doesn't swallow error messages
 app.config['PROPAGATE_EXCEPTIONS'] = True
