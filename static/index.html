@@ -61,9 +61,9 @@
         var justData = data.results
 
         //add the new pins
-        var markerArray = new Array(data.length)
-        for (var i = 0; i < data.length; i++){
-            location = data[i];
+        var markerArray = new Array(justData.length)
+        for (var i = 0; i < justData.length; i++){
+            location = justData[i];
             html = location.FEATURE_CLASS + " = " + location.FEATURE_NAME
             markerArray[i] = L.marker([location.pos.coordinates[1], location.pos.coordinates[0]]).bindPopup(html);
         }
