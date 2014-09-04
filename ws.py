@@ -46,7 +46,7 @@ def near():
     lat = float(request.args.get('lat'))
     lon = float(request.args.get('lon'))
     #use the request parameters in the query
-    result = db.placenames.find({"pos" : { "$near" : [lon,lat]}})
+    result = db.placenames.find({"pos" : { "$near" : {"$geometry" : { type : "Point" , "coordinates": [ lon , lat ] }}}})
     #turn the results into valid JSON
 
 
