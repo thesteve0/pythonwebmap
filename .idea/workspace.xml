@@ -70,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/ws.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.55518943" vertical-offset="398" max-vertical-offset="1275">
-              <caret line="49" column="134" selection-start-line="49" selection-start-column="134" selection-end-line="49" selection-end-column="134" />
+              <caret line="49" column="115" selection-start-line="49" selection-start-column="115" selection-end-line="49" selection-end-column="115" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -569,7 +569,7 @@
     <entry file="file://$PROJECT_DIR$/ws.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.55518943" vertical-offset="398" max-vertical-offset="1275">
-          <caret line="49" column="134" selection-start-line="49" selection-start-column="134" selection-end-line="49" selection-end-column="134" />
+          <caret line="49" column="115" selection-start-line="49" selection-start-column="115" selection-end-line="49" selection-end-column="115" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>

@@ -47,7 +47,7 @@ def near():
     lon = float(request.args.get('lon'))
     #use the request parameters in the query
     print "before query " + str(lat) + " :: " + str(lon)
-    result = db.placenames.find({"pos" : { "$near" : {"$geometry" : { "type" : "Point" , "coordinates": [ -82.0 , 45 ] }}}}).limit(100)
+    result = db.placenames.find({"pos" : { "$near" : {"$geometry" : { "type" : "Point" , "coordinates": [ lon , lat ] }}}}).limit(100)
     #result = db.placenames.count({"pos" : { "$near" : {"$geometry" : { "type" : "Point" , "coordinates": [ lon , lat ] }}}})
     print "after query"
 
