@@ -2,6 +2,7 @@ from flask import Flask
 from flask import g
 from flask import Response
 from flask import request
+from flask import render_template
 import os
 from pymongo.mongo_client import MongoClient
 import json
