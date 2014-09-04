@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <title>Map of parks</title>
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
     <!--[if lte IE 8]>
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.ie.css" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.ie.css" />
     <![endif]-->
     <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Milonga' rel='stylesheet' type='text/css'>
@@ -32,10 +32,16 @@
 <body>
 <h1 id="title">National Park Locator</h1>
 <div id="map"></div>
-<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
 <script>
+
+    //center the map and set the zoom level
     var map = L.map('map').setView([42.35, -71.06], 12);
+
+    //Add a layer group to hold the pins
     var markerLayerGroup = L.layerGroup().addTo(map);
+
+    //initialize the map with a  tile layer and set max zoom and attribution
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 18,
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
