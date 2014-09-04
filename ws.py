@@ -15,7 +15,7 @@ from bson import objectid
 
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='' )
 #add this so that flask doesn't swallow error messages
 app.config['PROPAGATE_EXCEPTIONS'] = True
 
