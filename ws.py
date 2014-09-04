@@ -8,6 +8,12 @@ import json
 from bson import json_util
 from bson import objectid
 
+#todo add a piece to server static content
+#todo see what the new json looks like client side
+#todo modify the JS that makes the pins
+
+
+
 app = Flask(__name__)
 #add this so that flask doesn't swallow error messages
 app.config['PROPAGATE_EXCEPTIONS'] = True
@@ -51,7 +57,8 @@ def within():
 
     # make a geoJSON box
     geometry = { "type" : "Polygon", "coordinates" : [[[lon1, lat1], [lon2, lat1], [lon2, lat2], [lon1, lat2], [lon1, lat1]]]}
-    result = db.placenames.find({"pos" : { "$geoWithin" : { "$geometry" : geometry} } })
+    #again impose a limit as the results may be large for larger map extents
+    result = db.placenames.find({"pos" : { "$geoWithin" : { "$geometry" : geometry} } }).limit(600)
     return Response(response=str(json.dumps({'results':list(result)},default=json_util.default)), status=200, mimetype="application/json" )
 
 
@@ -87,9 +94,10 @@ def all_parks():
 def test():
     return "<strong>It actually worked</strong>"
 
-@app.route("/")
-def base():
-    return "<h1>How very strange</h1>"
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 
 if __name__ == "__main__":
     app.run()
