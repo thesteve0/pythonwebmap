@@ -65,8 +65,8 @@
         var markerArray = new Array(justData.length);
         for (var i = 0; i < justData.length; i++){
             var record = justData[i];
-            //popupBind = location.FEATURE_CLASS + " = " + location.FEATURE_NAME
-            markerArray[i] = L.marker([record.pos.coordinates[1], record.pos.coordinates[0]]).bindPopup("hello");
+            popupBindTxt = location.FEATURE_CLASS + " = " + location.FEATURE_NAME;
+            markerArray[i] = L.marker([record.pos.coordinates[1], record.pos.coordinates[0]]).bindPopup(popupBindTxt);
             //console.log(record)
 
         }
