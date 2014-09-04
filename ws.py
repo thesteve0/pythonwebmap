@@ -38,7 +38,7 @@ if hasattr(g, 'mongodb_client'):
 @app.route("/ws/parks")
 def AllParks():
     db = get_db()
-    result = db.placenames.find()
+    result = db.placenames.find().limit(100)
     return Response(response=str(json.dumps({'results':list(result)},default=json_util.default)), status=200, mimetype="application/json" )
 
     #return str(json.dumps({'results':list(result)},default=json_util.default))
