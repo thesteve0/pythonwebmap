@@ -48,7 +48,7 @@ def near():
     #use the request parameters in the query
     result = db.placenames.find({"pos" : { "$near" : {"$geometry" : { type : "Point" , "coordinates": [ lon , lat ] }}}})
     #turn the results into valid JSON
-
+    return Response(response=str(json.dumps({'results':list(result)},default=json_util.default)), status=200, mimetype="application/json" )
 
 @app.route("/ws/parks")
 def AllParks():

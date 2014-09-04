@@ -69,8 +69,8 @@
       <file leaf-file-name="ws.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ws.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5930807" vertical-offset="360" max-vertical-offset="1170">
-              <caret line="48" column="113" selection-start-line="48" selection-start-column="113" selection-end-line="48" selection-end-column="113" />
+            <state vertical-scroll-proportion="0.6425041" vertical-offset="360" max-vertical-offset="1170">
+              <caret line="50" column="139" selection-start-line="50" selection-start-column="139" selection-end-line="50" selection-end-column="139" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -568,8 +568,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ws.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5930807" vertical-offset="360" max-vertical-offset="1170">
-          <caret line="48" column="113" selection-start-line="48" selection-start-column="113" selection-end-line="48" selection-end-column="113" />
+        <state vertical-scroll-proportion="0.6425041" vertical-offset="360" max-vertical-offset="1170">
+          <caret line="50" column="139" selection-start-line="50" selection-start-column="139" selection-end-line="50" selection-end-column="139" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
