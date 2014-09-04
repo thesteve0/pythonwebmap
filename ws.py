@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import g
 from flask import Response
+from flask import request
 import os
 from pymongo.mongo_client import MongoClient
 import json
@@ -35,9 +36,24 @@ if hasattr(g, 'mongodb_client'):
     g.mongodb_client.close()
 
 
+
+#find parks near a lat and long passed in as query parameters (near?lat=45.5&lon=-82)
+@app.route("/ws/parks/near")
+def near():
+    #setup the connection
+    db = get_db()
+    #get the request parameters
+    lat = float(request.args.get('lat'))
+    lon = float(request.args.get('lon'))
+    #use the request parameters in the query
+    result = db.placenames.find({"pos" : { "$near" : [lon,lat]}})
+    #turn the results into valid JSON
+
+
 @app.route("/ws/parks")
 def AllParks():
     db = get_db()
+    #only return the first 100 docs
     result = db.placenames.find().limit(100)
     return Response(response=str(json.dumps({'results':list(result)},default=json_util.default)), status=200, mimetype="application/json" )
 
