@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae5bdb99-3b1e-420c-bf0e-6be2f16c248d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ws.py" afterPath="$PROJECT_DIR$/ws.py" />
-    </list>
+    <list default="true" id="ae5bdb99-3b1e-420c-bf0e-6be2f16c248d" name="Default" comment="" />
     <ignored path="pythonwebmap.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,8 +66,8 @@
       <file leaf-file-name="ws.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ws.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6425041" vertical-offset="360" max-vertical-offset="1170">
-              <caret line="50" column="139" selection-start-line="50" selection-start-column="139" selection-end-line="50" selection-end-column="139" />
+            <state vertical-scroll-proportion="0.5930807" vertical-offset="360" max-vertical-offset="1170">
+              <caret line="48" column="10" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -191,7 +188,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="JavaScript.Libraries" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -568,8 +565,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ws.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6425041" vertical-offset="360" max-vertical-offset="1170">
-          <caret line="50" column="139" selection-start-line="50" selection-start-column="139" selection-end-line="50" selection-end-column="139" />
+        <state vertical-scroll-proportion="0.5930807" vertical-offset="360" max-vertical-offset="1170">
+          <caret line="48" column="10" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
