@@ -58,14 +58,14 @@
     function pinTheMap(data){
         //clear the current pins
         map.removeLayer(markerLayerGroup);
-        var justData = data.results;
+        //var justData = data.results;
 
         //add the new pins
         var markerArray = new Array(justData.length);
         for (var i = 0; i < justData.length; i++){
             location = justData[i];
             //popupBind = location.FEATURE_CLASS + " = " + location.FEATURE_NAME
-          //  markerArray[i] = L.marker([location.pos.coordinates[1], location.pos.coordinates[0]]).bindPopup("hello");
+            //markerArray[i] = L.marker([location.pos.coordinates[1], location.pos.coordinates[0]]).bindPopup("hello");
             console.log(location)
 
         }
@@ -77,7 +77,7 @@
 
     map.on('dragend', getPins);
     map.on('zoomend', getPins);
-    map.whenReady(getPins)
+    //map.whenReady(getPins)
 
 </script>
 </body>
