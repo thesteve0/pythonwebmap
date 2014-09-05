@@ -5,9 +5,13 @@ To add this project to your OpenShift application it is probably best to merge i
 
 After creating your application (in this case I am assuming you named your application pythonwebmap) on your local machine, do the following commands:
 
+
   cd pythonwebmap
+  
   git remote add upstream -m master https://github.com/thesteve0/pythonwebmap.git
+  
   git pull -s recursive -X theirs upstream master
+  
   git push
   
 
